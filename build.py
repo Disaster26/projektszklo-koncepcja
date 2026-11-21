@@ -45,7 +45,7 @@ pas = []
 for k, ims in SEL['strip'].items():
     for im in ims:
         pas.append(f'<button class="rk" type="button" data-k="{k}" data-lb="img/{sl(im)}-l.webp" aria-label="Powiększ zdjęcie: {KAT[k]}">'
-                   f'<img src="img/{sl(im)}-c.webp" width="600" height="800" loading="lazy" decoding="async" alt="{KAT[k]}, realizacja Projekt Szkło w Warszawie"></button>')
+                   f'<img src="img/{sl(im)}-c.webp" srcset="img/{sl(im)}-c.webp 600w, img/{sl(im)}-c8.webp 750w" sizes="(max-width:599px) 72vw, (max-width:899px) 42vw, 25vw" width="600" height="800" loading="lazy" decoding="async" alt="{KAT[k]}, realizacja Projekt Szkło w Warszawie"></button>')
 # przeplot kategorii w widoku "Wszystkie" - zamiast blokami
 import itertools
 grupy = {}
